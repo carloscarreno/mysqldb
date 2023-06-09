@@ -14,6 +14,18 @@ CREATE TABLE `office` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
+CREATE TABLE `parametro` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `tipo` varchar(16) NOT NULL,
+  `nombre` varchar(64) NOT NULL,
+  `valor` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+insert into parametro(tipo, nombre, valor) values('documento','Memorandum','MEM');
+insert into parametro(tipo, nombre, valor) values('documento','Informe','INF');
+insert into parametro(tipo, nombre, valor) values('documento','Oficio','OFI');
+insert into parametro(tipo, nombre, valor) values('documento','Resolucion','RES');
+
 insert  into office(city,phone,address_line1,address_line2,state,country,postal_code,territory) values ('San Francisco','+1 650 219 4782','100 Market Street','Suite 300','CA','USA','94080','NA');
 
 insert  into office(city,phone,address_line1,address_line2,state,country,postal_code,territory)  values ('Boston','+1 215 837 0825','1550 Court Place','Suite 102','MA','USA','02107','NA');
